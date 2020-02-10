@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+/* General styling */
+img {
+  height: 100%;
+  width: auto;
+}
+/* Add some padding on document's body to prevent the content
+    to go underneath the header and footer */
+body {
+  padding-top: 60px;
+  padding-bottom: 40px;
+  margin: 0;
+  height: 1500px;
+}
+.fixed-header,
+.fixed-footer {
+  width: 100%;
+  position: fixed;
+  /* background: #333; */
+  padding: 10px 0;
+  color: #fff;
+}
+.fixed-header {
+  width: 100%;
+  height: 100px;
+  top: 0;
+}
+.fixed-footer {
+  width: 100%;
+  height: 100px;
+  bottom: 0;
+}
+
+.face {
+  width: 200px;
+  height: 200px;
+  margin: 0 auto; /* Center the DIV horizontally */
+  /* background-color: aquamarine; */
+  display: flex;
+  align-items: center;
+  pointer-events: none;
+}
+.face-1,
+.face-3 {
+  justify-content: flex-start;
+}
+.face-2,
+.face-4 {
+  justify-content: flex-end;
+}
+.face-1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.face-2 {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.face-3 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.face-4 {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.content {
+  padding-top: 100px;
+  height: 100vh;
+  text-align: -webkit-center;
+}
+
+.cpu {
+  height: 400px;
+  width: 80vw;
+  /* background-color: rgba(135, 214, 228, 0.3); */
+  background-color: white;
+  margin: 50px;
+}
+
+.cpu-1{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.cpu-2{
+  margin-top: 150px;
+}
+
+.text{
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.5;
+  padding: 0 200px;
+}
+
+.circle:hover{
+  fill: red;
+}
+
+.arrow{
+  width: 80px;
+  height: 50px;
+  animation-name: arrowMovement;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+.arrow-wrapper{
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+#socket, #clock, #cores, #memory, #cache, #InputOutput, #cpu{
+  cursor: pointer;
+}
+
+.hidden{
+  display: none;
+}
+
+svg{
+  /* margin: 100px 0; */
+}
+
+@keyframes arrowMovement {
+  0%{
+    margin-left: -250px;
+    transform:rotate(180deg);
+  }
+  40%{
+    transform:rotate(180deg);
+  }
+  50%{
+    margin-left: 250px;
+    transform:rotate(0deg);
+  }
+  90%{
+    transform:rotate(0deg);
+  }
+  100%{
+    margin-left: -250px;
+    transform:rotate(180deg);
+  }
+}
+
